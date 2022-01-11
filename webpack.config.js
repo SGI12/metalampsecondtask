@@ -8,6 +8,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: {
         main: "./index.js",
+
     },
     output: {
         filename: "[name].js",
@@ -40,7 +41,11 @@ module.exports = {
          {
              test: /\.pug$/,
              loader: 'pug-loader'
-         }
+         },
+         {
+            test: /\.css$/,
+            use: [MiniCssExtractPlugin.loader, 'css-loader']
+        },
      ]
  }
 }
