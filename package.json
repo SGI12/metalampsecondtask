@@ -1,0 +1,35 @@
+{
+  "name": "metalampsecondtask",
+  "version": "1.0.0",
+  "description": "second task of metalamp internancy",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "keywords": [
+    "js",
+    "jsvascript",
+    "webpack"
+  ],
+  "author": "Daniil Zaretskiy <zaretskiy03@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "html-webpack-pug-plugin": "^4.0.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.45.2",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
+  }
+}
