@@ -1,4 +1,19 @@
 link(rel="stylesheet", href="button.css")
-mixin button(inputted_text)
-    button.btn= inputted_text
+mixin button(options)
+    -
+        let btnClass = "btn";
+
+        const {
+            title,
+            isDisabled
+        } = options;
+
+        if (isDisabled)
+            btnClass += " btn_disabled";
+
+    button(class=btnClass)=title
+
+
+
+
     
