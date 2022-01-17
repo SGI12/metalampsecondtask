@@ -1,9 +1,11 @@
 @import '../../../styles/vars.scss';
+
+
 .btn {
     border-radius: 22px;
+    min-height: 34px;
     background: $gradient;
     font-family: $font-family;
-    padding: 10px 20px;
     font-size: 12px;
     font-weight: bold;
     border: none;
@@ -11,11 +13,14 @@
     text-transform: uppercase;
     cursor: pointer;
     color: #fff;
-    line-height: 15px;
+    line-height: 15px/34px*100%;
     font-style: normal;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     width:100%;
+    max-width: 320px;
     margin: 20px 30px 30px 30px;
 
     
@@ -27,5 +32,34 @@
         opacity: 0.7;
         cursor: not-allowed;
     }
+
+    &_light {
+        color: $purple;
+        background: #fff;
+        border: 2px solid $purple;
+
+        &:hover {
+            opacity: 0.7;
+            background: #fff;
+          }
+    }
+
+    &_text {
+        padding: 0;
+        color: $purple;
+        background: none;
+    }
+}
+
+.btnText {
+    flex-grow: 1;
+    
+}
+.arrow {
+    background:url(./img/arrow_forward.svg);
+    background-repeat: no-repeat;
+    width: 6vh;
+    height: 6vh;
+
 }
 

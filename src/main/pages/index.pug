@@ -1,5 +1,10 @@
 include doctype.pug
 include ../components/button/button.pug
 
-+button({title:'Зарегистрироваться'})
-+button({title: 'Неактивная кнопка', isDisabled: true})
++button({title:"Зарегистрироваться"})
++button({title: "Неактивная кнопка", isDisabled: true})
++button({title: "Светлая кнопка", isLight: true})
++button({title: "Светлая неактивная кнопка", isLight: true, isDisabled: true})
++button({title: "Кнопка со стрелкой", withArrow: true})
++button({title: "Текстовая кнопка", isText: true})
++button({title: "Текстовая неактивная кнопка", isText: true, isDisabled: true})

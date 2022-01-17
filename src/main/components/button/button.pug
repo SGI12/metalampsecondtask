@@ -5,13 +5,30 @@ mixin button(options)
 
         const {
             title,
-            isDisabled
+            isDisabled=false,
+            isLight=false,
+            isText=false,
+            withArrow=false,
         } = options;
 
         if (isDisabled)
             btnClass += " btn_disabled";
 
-    button(class=btnClass)=title
+        if (isLight)
+            btnClass+= " btn_light";
+
+        if (isText)
+            btnClass+= " btn_text";
+
+        if (withArrow) {
+            btnClass+= " btn_with-arrow"; 
+        }
+
+
+    button(class=btnClass)
+        span(class='btnText')=title
+        -if (withArrow)
+            span.arrow
 
 
 
