@@ -15,6 +15,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: 'img/[name][ext]'
     },
+    
+    devServer: {
+        port: 8080
+    },
+
     plugins: [
         new HTMLWebpackPlugin({
             template: "./main/pages/index.pug",
@@ -48,4 +53,5 @@ module.exports = {
         },
      ]
  }
+
 }
