@@ -45,7 +45,7 @@ module.exports = {
          },
          {
              test: /\.pug$/,
-             loader: 'pug-loader'
+             loader: 'pug3-loader',
          },
          {
             test: /\.css$/,
