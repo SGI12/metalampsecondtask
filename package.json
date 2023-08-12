@@ -34,6 +34,7 @@
     "webpack-dev-server": "^4.7.1"
   },
   "dependencies": {
+    "jquery": "^3.7.0",
     "pug3-loader": "^2.4.3"
   }
 }
