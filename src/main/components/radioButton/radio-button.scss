@@ -1,0 +1,66 @@
+@import '../../../styles/vars.scss';
+
+.radio {
+  $root: &;
+
+  display: flex;
+
+  &__text {
+    display: flex;
+    color: $darkShade50;
+    line-height: 18px;
+    font-size: 14px;
+    position: relative;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      border: 1px solid $darkShade25;
+      border-radius: 18px;
+      margin-right: 10px;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 0;
+      border-radius: 10px;
+      background: $gradient;
+      left: 4px;
+      top: 4px;
+      content: '';
+      visibility: hidden;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    &:checked {
+      + #{$root}__text {
+        color: $darkShade75;
+
+        &::before {
+          border: 1px solid $purple;
+        }
+
+        &::after {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__label {
+    height: fit-content;
+    cursor: pointer;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

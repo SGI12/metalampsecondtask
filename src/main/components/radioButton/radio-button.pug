@@ -1,0 +1,16 @@
+mixin radio-button(options)
+  -
+    const {
+      name = 'undefined-name',
+      items = [],
+    } = options;
+
+  .radio
+    each item in items
+      label.radio__label
+        input.radio__button(
+          type="radio"
+          name= name
+          checked= item.checked
+        )
+        span.radio__text= item.text
