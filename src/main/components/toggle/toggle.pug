@@ -1,0 +1,13 @@
+mixin toggle(options)
+  -
+    const {
+      text = 'Стандартный текст',
+      checked = false,
+    } = options;
+
+  label.toggle
+    input.toggle__button(
+      type="checkbox"
+      checked= checked
+    )
+    span.toggle__text=text

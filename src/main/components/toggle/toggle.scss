@@ -1,0 +1,58 @@
+@import '../../../styles/vars.scss';
+
+.toggle {
+    $root: &;
+  
+    &__text {
+      display: flex;
+      color: $darkShade75;
+      line-height: 18px;
+      font-size: 14px;
+      cursor: pointer;
+      position: relative;
+  
+      &::before {
+        width: 38px;
+        height: 18px;
+        border: 1px solid $darkShade25;
+        border-radius: 10px;
+        margin: 0 10px 0 0;
+        content: '';
+      }
+  
+      &::after {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border: 0;
+        border-radius: 10px;
+        background: $darkShade25;
+        left: 4px;
+        top: 4px;
+        transition: left 200ms;
+        content: '';
+      }
+    }
+  
+    &__button {
+      position: absolute;
+      width: 0;
+      height: 0;
+      visibility: hidden;
+  
+      &:checked {
+        + #{$root}__text {
+          &::before {
+            border: 1px solid $purple;
+          }
+  
+          &::after {
+            left: 24px;
+            background: $gradient;
+          }
+        }
+      }
+  
+   
+    }
+  }

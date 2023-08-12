@@ -3,6 +3,7 @@ include ../components/button/button.pug
 include ../components/input/input.pug
 include ../components/checkboxButtons/checkbox-button.pug
 include ../components/radioButton/radio-button.pug
+include ../components/toggle/toggle.pug
 
 +button ({title: 'Регистрация'})
 +checkboxButtons({ items: [ { label: 'Можно курить' }, { label: 'Можно с питомцами', isChecked: false }, { label: 'Можно пригласить гостей (до 10 человек)', isChecked: false }, ], })
@@ -19,3 +20,7 @@ include ../components/radioButton/radio-button.pug
           },
         ]
       })
+
++toggle({
+  text: 'Получать спецпредложения',
+})
